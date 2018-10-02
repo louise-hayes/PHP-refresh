@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Takeda COE-C2</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css"> 
+
+   <!-- AdminLTE Skins. Choose a skin from the css/skins
+  folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/popup.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css"/>
+
+</head>
+<body class="hold-transition mainDiv sidebar-mini" id="chooseRoleBody">
+ <div class="wrapper">
+    <header class="main-header" id="spashHeader">    
+    <!--Top Header logo images attach Div start here-->   
+        <div class="row" id="">
+            <div class="col-xs-6 col-sm-6 col-lg-6 text-left">
+                <img class="img-responsive" id="logoId" src="../images/takeda_logo_big.png" />
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-6 text-left">
+                <img class="img-responsive" id="logoIdRight" src="../images/c3-logo2.png" />
+            </div>
+        </div>
+    <!--Top Header logo images attach Div end here-->
+    </header>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper1 container-login " id="centerBGImg">  
+        <div class="wrap-login chooseRoleDiv" id="loginRole"  style="display:none;">
+            <form class="login-form validate-form" >
+                <span class="login-form-title p-b-26">
+                    Choose Role
+                </span>
+                
+                <div class="container-login-form-btn">
+                    <div class="wrap_btn chooseDiv">
+                    </div>
+                </div>                
+            </form> 
+        </div>        
+    </div>
+    <!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+    <!--Bottom text Div display start here-->
+        <div class="bottomDiv">
+            <div class="" id="downHeaderImg">
+                <p class="pTagOurB">Our Business</p>
+                </br>
+                <span>Committed to Improving Health</span>
+            </div>
+        </div>    
+    </footer>
+    <!--Bottom display text Div end here-->
+    
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="../js/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../js/jquery/jquery-ui.min.js"></script>
+
+<script src="../js/jquery/jquery.dataTables.min.js"></script>
+<script src="../js/bootstrap/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/signIn.js"></script>
+<script src="../js/popup.js"></script>
+<script src="../js/chooseRole.js"></script>
+<script>chooseRoles()</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Takeda COE-C2</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
+ 
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/popup.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../css/AdminLTE.min.css">
+  
+  <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <!--token field CSS for multiple email inputs-->
+  <link rel="stylesheet" href="../css/bootstrap-tokenfield.css">  
+
+</head>
+<body class="hold-transition mainDiv sidebar-mini fixed">
+<div class="wrapper">
+
+  <header class="main-header fixed">
+    <!-- Logo -->
+    <a href="#" class="sidebar-toggle" id="customIconToggle"  data-toggle="push-menu" role="button"> 
+        <span></span> 
+     </a>
+
+    <a class="logo logoNavDiv">
+      <img src="../images/takeda_logo_big.png" class="" alt="User Image">
+      <span class="logo-lg"><b>Takeda</b></span>
+    </a>
+     
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button--> 
+        
+          <a href="" id="headerLogo" class="logo" style="display:none;" >
+            <img src="../images/takeda_logo_big.png" class="" alt="User Image">          
+          </a>
+  
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">            
+              <!-- Tasks: style can be found in dropdown.less -->
+             
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="../images/icon_user.png">
+                    <span class="hidden-xs">Alexander Pierce</span>
+                </a>
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+              <li>
+                  <img class="img-responsive logoRightSide" id="" src="../images/c3-logo2.png">              
+              </li>
+            </ul>
+          </div>     
+      </nav>
+  </header>
+  
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar fixed">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->    
+      <ul class="sidebar-menu" data-widget="tree">
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper whiteContainer" id="contentDiv">
+    <div class="budgetFormHeader">
+      <p class="pHeader">Budget Escalation</p>
+    </div>
+    <div class="budgetFormDiv">
+      <form>
+        <div class="divBorderBottom text-center"> 
+          <div class="row">
+              <div class="col-xs-12">
+                <p class="blueText text-uppercase text-bold text-left">enter study details</p>
+              </div>
+              <div class="col-xs-6"> 
+                <label>Protocol Number</label> 
+                <select class="selectpicker" data-live-search="true">
+                  <option data-tokens=""> </option>
+                  <option data-tokens=""> </option>
+                  <option data-tokens=""> </option>
+                </select>  
+              </div> 
+              <div class="col-xs-6"> 
+                <label>Site Name</label> 
+                <select class="selectpicker" data-live-search="true">
+                  <option data-tokens=""></option>
+                  <option data-tokens=""></option>
+                  <option data-tokens=""></option>
+                </select> 
+              </div> 
+            <div class="col-xs-6"> 
+              <label>Country</label> 
+              <select class="selectpicker" data-live-search="true">
+                <option data-tokens=""></option>
+                <option data-tokens=""></option>
+                <option data-tokens=""></option>
+              </select> 
+            </div>
+            <div class="col-xs-6"> 
+              <label>Raised By</label> 
+              <input type="text" name="raisedBy" value="" placeholder="Enter Raised By"> 
+            </div>
+            <div class="col-xs-6"> 
+              <label>Principal Investigator</label> 
+              <input type="text" name="principalInvestigator" value="" placeholder="Enter Principal Investigator"> 
+            </div> 
+            <div class="col-xs-6"> 
+              <label>Requested By</label> 
+              <input type="text" name="requestedBy" value="" placeholder="Enter Requested By"> 
+            </div>
+            <div class="col-xs-12 multipleEmailDiv"> 
+              <label style="width:20%;">CC</label> 
+              <input style="width:80%;" type="email" name="email" id="tokenfield" value="abc@gmail.com"> 
+            </div>
+            <div class="col-xs-12 text-left">
+                <p class="pIssueRaised">Was this issue previously raised in the app and if so, should this be directed to specific Takeda Contract manager</p>                
+                <div class="col-xs-1 customWidth">
+                  <input type="radio" name="issueRaised" value="yes" checked> 
+                  <div class="check checkColor"></div>
+                </div>
+                <p class="radioBtns">Yes</p>
+                <div class="col-xs-1 customWidth">
+                  <input type="radio" name="issueRaised" value="no"> 
+                  <div class="check checkColor"></div>
+                </div>
+                <p class="radioBtns">No</p>
+            </div>  
+          </div>
+        </div>
+
+        <div class="divBorderBottom"> 
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="blueText text-uppercase text-bold text-left">choose an issue type</p>
+            </div> 
+            <div class="col-xs-12 issueTypeDiv">
+              <div class="col-xs-1 customWidth">
+                <input type="radio" name="issueType" value="procedure" checked> 
+                <div class="check checkColor"></div>
+              </div>
+              <div class="col-xs-11"> 
+                <span>Procedure</span>  
+              </div>
+            </div> 
+            <div class="col-xs-12 issueTypeDiv">
+              <div class="col-xs-1 customWidth">
+                <input type="radio" name="issueType" value="personnel"> 
+                <div class="check checkColor"></div>
+              </div>
+              <div class="col-xs-11"> 
+                <span>Personnel</span>  
+              </div>
+            </div> 
+            <div class="col-xs-12 issueTypeDiv">
+              <div class="col-xs-1 customWidth">
+                <input type="radio" name="issueType" value="overhead"> 
+                <div class="check checkColor"></div>
+              </div>
+              <div class="col-xs-11"> 
+                <span>Overhead</span>  
+              </div>
+            </div> 
+            <div class="col-xs-12 issueTypeDiv">
+              <div class="col-xs-1 customWidth">
+                <input type="radio" name="issueType" value="siteCosts"> 
+                <div class="check checkColor"></div>
+              </div>
+              <div class="col-xs-11"> 
+                <span>Site Costs</span>  
+              </div>
+            </div> 
+            <div class="col-xs-12 issueTypeDiv">
+              <div class="col-xs-1 customWidth">
+                <input type="radio" name="issueType" value="invoicable"> 
+                <div class="check checkColor"></div>
+              </div>
+              <div class="col-xs-11"> 
+                <span>Invoicable/Conditional</span>  
+              </div>
+            </div> 
+            <div class="col-xs-12 issueTypeDiv">
+              <div class="col-xs-1 customWidth">
+                <input type="radio" name="issueType" value="payments"> 
+                <div class="check checkColor"></div>
+              </div>
+              <div class="col-xs-11"> 
+                <span>Subject Reimbursements/Payments</span>  
+              </div>
+            </div>
+            <div class="col-xs-12 issueTypeDiv">
+              <div class="col-xs-1 customWidth">
+                <input type="radio" name="issueType" value="patient"> 
+                <div class="check checkColor"></div>
+              </div>
+              <div class="col-xs-11"> 
+                <span>Toal Cost Per Visit/Patient</span>  
+              </div>
+            </div>  
+            <div class="col-xs-12 issueTypeDiv">
+              <div class="col-xs-1 customWidth">
+                <input type="radio" name="issueType" value="others"> 
+                <div class="check checkColor"></div>
+              </div>
+              <div class="col-xs-11"> 
+                <span>Others</span>  
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div class="divBorderBottom"> 
+          <p class="blueText text-uppercase text-bold text-left">choose an issue type</p> 
+          <textarea class="form-control" rows="3">Lorem ipsem dolor sit amet</textarea>
+          <div class="row">
+            <div class="col-xs-6"> 
+              <label class="text-uppercase">site request</label>
+              <input id="customInput" type="text" value="SYR_322-309">
+              <div class="dropdown budgetFormDropdowns">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">USD
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">USD</a></li>
+                  <li><a href="#">AUD</a></li>
+                  <li><a href="#">BGN</a></li>
+                </ul>
+              </div>  
+            </div> 
+            <div class="col-xs-6"> 
+              <label class="text-uppercase">initial offer</label> 
+              <input id="customInput" type="text" value="SYR_322-309"> 
+              <div class="dropdown budgetFormDropdowns">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">USD
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">USD</a></li>
+                  <li><a href="#">AUD</a></li>
+                  <li><a href="#">BGN</a></li>
+                </ul>
+              </div>
+            </div> 
+            <div class="col-xs-6"> 
+                <label class="text-uppercase">percent over initial offer</label> 
+                <select class="selectpicker" data-live-search="true">
+                  <option data-tokens=""></option>
+                  <option data-tokens=""></option>
+                  <option data-tokens=""></option>
+                </select>  
+              </div>
+          </div> 
+        </div>
+
+        <div class="divBorderBottom">
+          <div class="row">
+            <div class="col-xs-8"> 
+              <label class="text-uppercase">fmv 75% benchmark</label>
+              <input id="customInput" type="text" value="SYR_322-309">
+              <div class="dropdown budgetFormDropdowns">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">USD
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">USD</a></li>
+                  <li><a href="#">AUD</a></li>
+                  <li><a href="#">BGN</a></li>
+                </ul>
+              </div>  
+            </div>
+            <div class="col-xs-offset-4"></div> 
+            <div class="col-xs-8"> 
+              <label class="text-uppercase">percent over fmv benchmark</label> 
+              <input id="customInput" type="text" value="SYR_322-309"> 
+              <div class="dropdown budgetFormDropdowns">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">USD
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">USD</a></li>
+                  <li><a href="#">AUD</a></li>
+                  <li><a href="#">BGN</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-offset-4"></div>  
+          </div> 
+        </div>
+
+        <div class="divBorderBottom"> 
+          <p class="blueText text-uppercase text-bold text-left">site justification and negotiation history</p> 
+          <textarea class="form-control" rows="3">Lorem ipsem dolor sit amet</textarea> 
+          <p class="blueText text-uppercase text-bold text-left">any other details</p> 
+          <textarea class="form-control" rows="3">Lorem ipsem dolor sit amet</textarea>
+        </div> 
+
+        <div class="row marginTop">
+          <div class="col-xs-12 text-left">
+            <p class="pIssueRaised">Do you want to add attachment</p>                
+            <div class="col-xs-1 customWidth">
+              <input type="radio" name="addAttachment" value="yes"> 
+              <div class="check checkColor"></div>
+            </div>
+            <p class="radioBtns">Yes</p>
+            <div class="col-xs-1 customWidth">
+              <input type="radio" name="addAttachment" value="no"> 
+              <div class="check checkColor"></div>
+            </div>
+            <p class="radioBtns">No</p>
+          </div> 
+
+          <div class="col-xs-12 text-left">
+            <p class="pIssueRaised">Is this request of High Priority i.e response needed within 48 hours or less?</p>                
+            <div class="col-xs-1 customWidth">
+              <input type="radio" name="priority" value="yes"> 
+              <div class="check checkColor"></div>
+            </div>
+            <p class="radioBtns">Yes</p>
+            <div class="col-xs-1 customWidth">
+              <input type="radio" name="priority" value="no"> 
+              <div class="check checkColor"></div>
+            </div>
+            <p class="radioBtns">No</p>
+          </div>
+          
+          <div class="col-xs-12 text-left">
+            <p class="pIssueRaised">Do you want to add any other issue</p>                
+            <div class="col-xs-1 customWidth">
+              <input type="radio" name="otherIssue" value="yes"> 
+              <div class="check checkColor"></div>
+            </div>
+            <p class="radioBtns">Yes</p>
+            <div class="col-xs-1 customWidth">
+              <input type="radio" name="otherIssue" value="no"> 
+              <div class="check checkColor"></div>
+            </div>
+            <p class="radioBtns">No</p>
+          </div> 
+
+          <div class="col-xs-12">
+            <div class="submitBtnDiv wrap-login-form-btn">
+              <button type="submit" class="btn btn-info signupSubBtn">Submit</button>
+            </div>
+          </div>
+        </div> 
+
+      </form>
+    </div>
+       
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- <footer class="main-footer">
+  </footer> -->
+
+  <!-- Add the sidebar's background. This div must be placedraiseNewRequest
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+
+<!-- jQuery 3 -->
+<script src="../js/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../js/jquery/jquery-ui.min.js"></script>
+
+<script src="../js/jquery/jquery.dataTables.min.js"></script>
+<script src="../js/bootstrap/dataTables.bootstrap.min.js"></script>
+
+<!--token field JS for multiple email inputs -->
+<script src="../js/bootstrap-tokenfield.js"></script> 
+
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+
+   //token field for multiple email inputs 
+   $('#tokenfield').tokenfield();
+</script>
+
+<!-- Bootstrap 3.3.7 -->
+<script src="../js/bootstrap/bootstrap.min.js"></script>
+
+<script src="../js/adminlte.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/signIn.js"></script>
+<script src="../js/popup.js"></script>
+<script src="../js/croDashboard.js"></script>
+<script src="../js/raiseNewReuest.js"></script>
+<script src="../js/budgetForm.js"></script> 
+<script src="../js/hamburger.js"></script>
+<script>
+  budgetForm();
+</script>
+</body>
+</html>

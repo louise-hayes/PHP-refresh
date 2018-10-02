@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Takeda COE-C2</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/popup.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../css/AdminLTE.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/summernote.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css"/>
+    <link rel="stylesheet" href="../css/sumoselect.css">
+  
+</head>
+<body class="hold-transition mainDiv sidebar-mini"> 
+
+        <div class="wrapper fixed">
+            <header class="main-header fixed">
+                <!-- Logo -->
+                <a href="index2.html" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <span class="logo-mini">
+                        <b>C2</b>
+                    </span>
+                    <!-- logo for regular state and mobile devices -->
+                    <img src="../images/takeda_logo_big.png" class="" alt="User Image">
+                    <span class="logo-lg">
+                        <b>Takeda</b>
+                    </span>
+                </a>
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">                        
+                            <li class="user user-menu">
+                                <a href="#" data-toggle="control-sidebar">
+                                    <i class="fa"><img src="../images/icon_user.png" class="" alt="User Image"></i>
+                                    <span class="hidden-xs userName">Alexander Pierce</span>
+                                </a>                           
+                            </li>
+                            <!-- Control Sidebar Toggle Button -->
+                            <li>
+                                
+                                <a href="#" data-toggle="control-sidebar">
+                                    <i class="fa"><img src="../images/nav_logo.png" alt="C3-Logo"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+    
+                <div class="budgetFormHeader">
+                    <div class="col-xs-8 col-sm-8 col-lg-8" id="">
+                        <p class="pHeader">CoE User Management</p>
+                    </div>
+                    <!-- Add User Button -->
+                    <div class="col-xs-4 col-sm-4 col-lg-4" id="">
+                        <div class="addUserdiv">
+                            <a href="#" class="btn add_user" onclick="callToUserRole()">Add User</a>
+                            <div class="siteProtocol">
+                                <a href="#" class="btn addProtocol" onclick="addProtocolSite('protocol')"><img src="../images/protocol.png" alt="C3-Logo"></a>
+                                <a href="#" class="btn addSite" onclick="addProtocolSite('site')"><img src="../images/site.png" alt="C3-Logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+             <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar fixed">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+    
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">            
+            <!-- From Date -->
+                <section class="content sectionContainer">
+                        <div class="navTabDiv">
+                                <ul class="nav nav-tabs" id="tabBarUser">
+                                </ul>
+                                
+                            <!-- Search input -->
+                            <input type="text" id="searchbox" class="userSearch" style="margin-top: 5px;">
+                        </div>                     
+                        <h1>Multiple</h1> 
+
+                        <select multiple="multiple" placeholder="Select Role" class="SlectBox" required>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                        <div class="addLegalICFBtn"></div>
+                        <!-- Table Attached Div -->
+                        <div class="tableMainContainer userTable">              
+                        </div>
+                </section>
+            <!-- /.content-wrapper -->    
+    
+            <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+            <div class="control-sidebar-bg"></div>
+        </div>
+
+        <script src="../js/jquery/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="../js/jquery/jquery-ui.min.js"></script>
+    
+        <script src="../js/jquery/jquery.dataTables.min.js"></script>
+        
+        <script src="../js/bootstrap/dataTables.bootstrap.min.js"></script>
+    
+        <!-- date-range-picker -->
+        <script src="../js/bootstrap/moment.min.js"></script>
+        <script src="../js/bootstrap/bootstrap-datepicker.min.js"></script>
+        
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+    
+        <!-- Bootstrap 3.3.7 -->
+        <script src="../js/bootstrap/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>
+        <script src="../js/adminlte.min.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/signIn.js"></script>
+        <script src="../js/popup.js"></script>
+        <script src="../js/croDashboard.js"></script>
+        <script src="../js/EMDashboard.js"></script>
+        <script src="../js/LMDashboard.js"></script>
+        
+        <script src="../js/userManagement.js"></script>    
+        <script src="../js/requestListPopup.js"></script>
+        <script src="../js/hamburger.js"></script>
+        <script src="../js/summernote.js"></script>
+        <script src="../js/addUser.js"></script>
+        <script src="../js/ICFAssignment.js"></script> 
+        <script src="../js/siteProtocol.js"></script>
+        <script src="../js/multiStepModel.js"></script>   
+        <script src="../js/jquery/jquery.sumoselect.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.asd = $('.SlectBox').SumoSelect({ csvDispCount: 3 });            
+        });
+    </script>
+</body>
+</html>
